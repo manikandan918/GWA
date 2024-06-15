@@ -1,0 +1,224 @@
+.hero-section {
+    background: linear-gradient(180deg, #EDF3FF 0%, #FFFFFF 100%);
+  
+   
+}
+
+.hero-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+.hero-content-head h5 {
+    color: #0167FF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: left;
+}
+
+.hero-content-head .hero-title {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 46px;
+    text-align: left;
+}
+
+.hero-content-head .hero-title span {
+    color: #0167FF;
+}
+
+.hero-content-head .search-bar {
+    width: 100%;
+    max-width: 530px;
+    height: 60px;
+    border-radius:5px;
+    background: #FFFFFF;
+    border: 1px solid #C3CFE0;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 10px;
+    /* box-sizing: border-box; */
+}
+
+.hero-content-head .custom-select-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    font-size: 16px;
+}
+
+.hero-content-head .custom-select-wrapper select {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #535353;
+    padding-left: 10px;
+    max-width: 60px;
+}
+
+.hero-content-head .custom-select-wrapper select option {
+    font-size: 16px;
+    max-width: 50px;
+}
+
+.hero-content-head .icon-loc-src {
+    color: #535353;
+}
+
+.hero-content-head .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    
+}
+
+.hero-content-head .search .search-input {
+    color: #767F8C;
+    background: none;
+    border: none;
+    outline: none;
+    padding:0px 0.5rem;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.hero-content-head .search .search-button {
+    background-color: #007bff;
+    color: white;
+    border:2.5px solid #035bba;
+    border-radius:5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+
+}
+
+.hero-content-head .search .search-button:hover {
+    border-color: #007bff;
+}
+
+.hero-content-head .simple-line {
+    height: 40px;
+    margin-right: 10px;
+    border: 0.5px solid transparent;
+    border-image: linear-gradient(to top, #f5f5f5 20%, #767F8C 60%, #f5f5f5 70%);
+    border-image-slice: 1;
+}
+
+/* .map-image {
+    width: 100%;
+    max-width: 140px;
+    height: auto;
+    opacity: 20%;
+    margin-top: 5rem;
+} */
+
+.animation {
+    width: 150px;
+    height: 100px;
+    background-image: url('../Assets/map.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: playAnimation 14s ease-in-out infinite;
+    
+  }
+
+  @keyframes playAnimation {
+    0% {
+      opacity: 0%;
+    }
+    10% {
+       opacity: 0%;
+    }
+    20% {
+      opacity:100%;
+    }
+    30% {
+      opacity: 0%;
+      
+    }
+    40% {
+      opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    60% {
+        opacity: 0%;
+    }
+    70% {
+        opacity: 0%;
+    }
+    80% {
+        opacity: 100%;
+    }
+    90% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+  }
+  
+
+.image-division {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 9rem;
+    position: relative;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    z-index: 1;
+}
+
+.layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(249, 251, 255, 0) 60%, #FCFDFF 90%);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero-content-head .hero-title {
+        font-size: 29px;
+        line-height: 44px;
+    }
+
+  
+    .image-division {
+        margin-top: 4rem;
+    }
+}

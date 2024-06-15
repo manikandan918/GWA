@@ -1,0 +1,52 @@
+
+.dwon-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+
+}
+.dwon-arrow .image-arrow{
+    width: 80px;
+    height: 80px;
+}
+
+.navbar-back{
+    background: #F6F8FC;
+    border:2px solid #C3CFE0;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0px 10px 24px 0px #ACACAC26;
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.button-color{
+    background: #0167FF;
+    color: #FFFFFF;
+    border: none;
+    border-radius:5px;
+    padding: 7px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    /* display: flex;
+    justify-content:start;
+    align-self: start; */
+    line-height: 25px;
+}
+.color-style{
+   background-color: white;
+}
+
+.image-lap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.image-lap img{
+    width: 100%;  
+}
+
+

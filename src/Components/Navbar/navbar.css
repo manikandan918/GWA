@@ -1,0 +1,102 @@
+.navbar-costom-style{
+    padding: 10px 70px;
+}
+  
+.nav-link-style{
+    color: #272848;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: left;
+}
+.nav-ul li{
+  margin-left:10px;
+}
+  
+/*======================dropdown-style-------start====================*/
+
+.dropdown-menu {
+    background-color: #272848; 
+}
+
+.dropdown-item {
+    color: #fff;
+    padding: 10px 20px;
+}
+  
+.dropdown-item:hover {
+    background-color: #FFFFFF;
+}
+  
+/* Remove default icons */
+.nav-link.dropdown-toggle::after {
+    display: none;
+}
+
+/*======================dropdown-style-------End====================*/
+
+.nav-signin-button {
+  border: 1px solid #0167FF;
+  color: #0167FF;
+  padding: 7px 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-register-button {
+  background: #0167FF;
+  color: #FFFFFF;
+  padding: 7px 20px;
+  font-size: 16px;
+  font-weight: 600;
+} 
+  
+  /* Responsive Styles */
+
+  @media (max-width: 990px) {
+
+    .navbar-costom-style .navbar-nav{
+        margin-top: 10px;
+    }
+    .navbar-nav {
+      flex-direction: column;
+    }
+  
+    .nav-item {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .nav-signin-button,
+    .nav-register-button {
+      width: 30%;
+      text-align: center;
+    }
+  
+    .nav-signin-button {
+      margin-bottom: 10px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+    }
+  
+    .nav-item {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  
+    .nav-signin-button,
+    .nav-register-button {
+      width: 60%;
+      text-align: center;
+    }
+  
+    .nav-signin-button {
+      margin-bottom: 10px;
+    }
+  }
+
