@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './nestednavbar.css';
 import downarrowimage from '../Assets/dwon.gif';
-import lap from '../Assets/lap.png';
 import Navbar from '../Navbar/Navbar';
-// Aos animations
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import Hero from '../Hero/Hero'
+import gwatrailer from '../Assets/gwa-trailer.mp4';
 
 const Nestednavbar = () => {
   const [isNestedVisible, setIsNestedVisible] = useState(false);
 
   useEffect(() => {
-    Aos.init();
     const handleScroll = () => {
       const arrowSection = document.querySelector('.dwon-arrow');
       const arrowSectionBottom = arrowSection.getBoundingClientRect().top;
@@ -30,70 +27,65 @@ const Nestednavbar = () => {
     };
   }, []);
 
-  const styles = {
-   
-    label: {
-      marginRight: '10px',
-      fontWeight: 'bold',
-      color: '#272848',
-    },
-    input: {
-      border: 'none',
-      outline: 'none',
-      
-      color: '#272848',
-      marginRight: '10px',
-      flex: 1,
-    },
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      const videoPlayer = document.querySelector('.video-player');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+      if (scrollTop > maxScroll / 10) {
+        videoPlayer.classList.add('zoomed');
+        videoPlayer.classList.remove('zoomed-out');
+      } else {
+        videoPlayer.classList.add('zoomed-out');
+        videoPlayer.classList.remove('zoomed');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
       {isNestedVisible && (
         <div className="nested sticky-top">
           <div className="color-style">
-            <Navbar />
+            <Navbar/>
           </div>
-          <div className="navbar-back">
-            <div className="container-fluid">
-              <form>
-                <div className="row align-items-center d-flex justify-content-center m-0 p-0">
-                 
-                  <div className="col-12 col-md-6 ">
-                    <div className='form-control'>
-                      <label style={styles.label}>What</label>
-                      <input type="text"   placeholder="Search Doctors, providers or conditions" style={styles.input} />
-                    </div>
-                  </div>
-                  <div className="col-12 col-md-4 ">
-                    <div className='form-control'>
-                      <label style={styles.label}>Where</label>
-                      <input type="text" placeholder="United Arab Emirates" style={styles.input} />
-                    </div>
-                  </div>
-                  
-                  <div className="col-12 col-md-2 text-center">
-                    <button type="submit" className="btn button-color">
-                      Find My Doctor
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
+          
+          <div className="navbar-back ">
+            <form>
+              <div className="form-control-one">
+                <label>What</label>
+                <input className='width-input' type="text" placeholder="Search Doctors, providers or conditions" />
+              </div>
+              <div className="form-control-two">
+                <label>Where</label>
+                <input type="text" placeholder="United Arab Emirates" />
+              </div>
+              <button type="submit" className="btn button-color">
+                Find My Doctor
+              </button>
+            </form>
           </div>
         </div>
       )}
 
-      <section className="dwon-arrow">
+      <div className="dwon-arrow">
         <img src={downarrowimage} className="image-arrow" alt="Map" />
-      </section>
+      </div>
 
-      <div className="image-lap" data-aos="zoom-in" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        <img
-          src={lap}
-          className="animating-image"
-          alt="Lap"
-        />
+      <div className="video-wrapper">
+        <div className="video-player zoomed-out">
+          <video loop muted controls className="video">
+            <source src={gwatrailer} type="video/mp4" />
+          </video>
+        </div>
       </div>
     </>
   );

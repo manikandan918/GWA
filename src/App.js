@@ -1,26 +1,21 @@
 
+
 import './App.css';
-
-//Bootstrap imported
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle.js';
-
+import Section from './components/section/section';
+import Hero from './components/Hero/Hero';
+import Nestednabar from './components/Nestednavbar/Nestednavbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //import react-router
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-//All components import
-import Hero from './Components/Hero/Hero';
-import Nestednavbar from './Components/Nestednavbar/Nestednavbar';
-
 function App() {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={[<Hero/>,<Nestednavbar/>]}/>
-        </Routes>
-      </Router>
-    </>
+   
+    <Router>
+    <Routes>
+      <Route path="/" element={[<Hero/> ,<Nestednabar/>,<Section/>]}/>
+    </Routes>
+  </Router>
   );
 }
 

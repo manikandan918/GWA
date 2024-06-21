@@ -1,5 +1,5 @@
 .navbar-costom-style{
-    padding: 10px 70px;
+  padding: 15px 50px;
 }
   
 .nav-link-style{
@@ -35,7 +35,7 @@
 
 /*======================dropdown-style-------End====================*/
 
-.nav-signin-button {
+.navbar-costom-style .nav-signin-button {
   border: 1px solid #0167FF;
   color: #0167FF;
   padding: 7px 20px;
@@ -43,7 +43,7 @@
   font-weight: 600;
 }
 
-.nav-register-button {
+.navbar-costom-style .nav-register-button {
   background: #0167FF;
   color: #FFFFFF;
   padding: 7px 20px;
@@ -52,51 +52,65 @@
 } 
   
   /* Responsive Styles */
+  
+@media (max-width: 1200px) {
+  .navbar-costom-style{
+    padding: 15px 20px;
+  }
+} 
 
-  @media (max-width: 990px) {
-
-    .navbar-costom-style .navbar-nav{
-        margin-top: 10px;
-    }
-    .navbar-nav {
-      flex-direction: column;
-    }
-  
-    .nav-item {
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  
-    .nav-signin-button,
-    .nav-register-button {
-      width: 30%;
-      text-align: center;
-    }
-  
-    .nav-signin-button {
-      margin-bottom: 10px;
-    }
+@media (max-width: 991px) {
+  .navbar-costom-style{
+    padding: 15px 20px;
   }
 
-
-  @media (max-width: 768px) {
-    .navbar-nav {
-      flex-direction: column;
-    }
-  
-    .nav-item {
-      margin-left: 0;
-      margin-bottom: 10px;
-    }
-  
-    .nav-signin-button,
-    .nav-register-button {
-      width: 60%;
-      text-align: center;
-    }
-  
-    .nav-signin-button {
-      margin-bottom: 10px;
-    }
+  .navbar-costom-style .navbar-nav{
+    margin-top: 10px;
   }
+  .navbar-brand{
+    margin-left: 20px; 
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+  
+  .nav-item {
+    margin-left:0;
+    margin-bottom: 10px;
+  }
+  
+  .nav-signin-button,
+  .nav-register-button {
+    width: 30%;
+    text-align: center;
+  }
+  
+  .nav-signin-button {
+    margin-bottom:10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+  
+  
+  .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  
+  .nav-signin-button,
+  .nav-register-button {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .nav-signin-button {
+    margin-bottom: 10px;
+  }
+}
 

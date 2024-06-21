@@ -1,0 +1,49 @@
+.containers {
+  background-color: #F4F7FC;
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  width: 100%; /* Set width to 100% */
+}
+
+.loremipsum {
+  color: #0167FF;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%; /* Set width to 100% */
+  max-width: 800px; /* Add max-width for better readability on larger screens */
+  margin: auto; /* Center the content horizontally */
+}
+
+.main-content p,
+.main-content h1 {
+  margin: 20px 0;
+}
+
+.centered-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.black-text {
+  color: black;
+}
+
+.blue-text {
+  color: #0167FF;
+}
+
+.footer {
+  padding: 10px 0;
+  background-color: #DBE8FF;
+  width: 100%;
+}
