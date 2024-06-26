@@ -1,6 +1,8 @@
 // src/App.js
 
 import React from 'react';
+import Hero from '../Hero/Hero';
+import Nestednavbar from '../Nestednavbar/Nestednavbar';
 import CenteredContent from '../section7/section7';
 import TestimonialSlider from '../section5/TestimonialSlider';
 import Footerr from '../footer/footer';
@@ -14,11 +16,10 @@ import Insights from '../Insight/Insights';
 function Section() {
   return ( 
     <div className="Container">
-      <div>
+      <Hero/>
+      <Nestednavbar/>
       <WhyUs/>
-
-      </div>
-<Insights/>
+      <Insights/>
       <TestimonialSlider/>
    
       <CenteredContent/>

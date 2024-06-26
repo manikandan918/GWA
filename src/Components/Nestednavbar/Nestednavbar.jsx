@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './nestednavbar.css';
 import downarrowimage from '../Assets/dwon.gif';
 import Navbar from '../Navbar/Navbar';
-import Hero from '../Hero/Hero'
+
 import gwatrailer from '../Assets/gwa-trailer.mp4';
 
 const Nestednavbar = () => {

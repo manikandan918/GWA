@@ -1,5 +1,6 @@
 .insight-background{
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 853px;
     top: 3401px;
     padding: 120px 0px 119.02px 80px;
@@ -18,7 +19,7 @@ top: 311px;
 left: 80px;
 gap: 0px;
  opacity: 1;
-margin-top: 100px;
+margin-top: 180px;
 
 }
 
@@ -81,28 +82,41 @@ color: #272848;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #fff;
+    border: 1px solid #272848;
+    transition: background 0.3s, border 0.3s;
+    cursor: pointer;
 }
 
-.left-round.active {
+.left-round.active:hover, .right-round.active:hover, 
+.left-round.active:active, .right-round.active:active,
+.left-round.inactive:hover, .right-round.inactive:hover,
+.left-round.inactive:active, .right-round.inactive:active {
     background: #0167FF;
     border: 1px solid transparent;
 }
 
-.left-round.inactive {
+.left-round svg path, .right-round svg path {
+    stroke: #272848;
+    transition: stroke 0.3s;
+}
+
+.left-round.active:hover svg path, .right-round.active:hover svg path, 
+.left-round.active:active svg path, .right-round.active:active svg path,
+.left-round.inactive:hover svg path, .right-round.inactive:hover svg path,
+.left-round.inactive:active svg path, .right-round.inactive:active svg path {
+    stroke: #fff;
+}
+
+.left-round.inactive, .right-round.inactive {
     background: #fff;
     border: 1px solid #272848;
+    cursor: default;
 }
 
-.right-round {
-    background: #0167FF;
-    border: 1px solid transparent;
+.left-round.inactive svg path, .right-round.inactive svg path {
+    stroke: #000;
 }
-
-.right-round.inactive {
-    background: #fff;
-    border: 1px solid #272848;
-}
-
 
 
 .insight-card{
@@ -307,7 +321,8 @@ margin-top: 30px;
      opacity: 1;
       border-radius: 50%;
 
-    background: url('../../../../gwa_projects/public/insightpersonone.png') no-repeat;
+    background: url('/public/insightpersonone.png') no-repeat;
+   
     background-size: 150% 150%;
     background-position: 130% top; 
 }
@@ -333,7 +348,7 @@ top: 36.02px;
 left: 36px;
 gap: 0px;
  opacity: 1;
-background: url('../../../../gwa_projects/public/insight1.jpg') center no-repeat;
+background: url('/public/insight1.jpg') center no-repeat;
 background-size: cover;
 }
 
@@ -404,7 +419,7 @@ border-radius: 50%;
      opacity: 1;
     border-radius: 50%;
 
-    background: url('../../../../gwa_projects/public/insightpersontwo.jpeg') no-repeat;
+    background: url('/public/insightpersontwo.jpeg') no-repeat;
     background-size: 230% 230%; 
     background-position: 35% top; 
 }
@@ -428,502 +443,223 @@ top: 36.02px;
 left: 36px;
 gap: 0px;
  opacity: 1;
-background: url('../../../../gwa_projects/public/insight2.jpg') center no-repeat ;
+background: url('/public/insight2.jpg') center no-repeat ;
 background-size: cover;
 }
 
 
 
 
-@media only screen and (max-width: 767px) {
-    .insight-background {
-        
 
+@media (max-width: 819px) {
+    .insight-background {
+        width: 100%;
+        height: 50%;
+        max-width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow-x: hidden;
-        width: 110%;
-        max-width: 110%;
         box-sizing: border-box; 
-        overflow-y: auto;
+overflow-x: hidden; 
             padding: 120px 30px 119.02px 40px;
-      
-    }
+    
 
-    .frame {
-        width: 414px;
-        height: 231px;
-        top: 311px;
-        left: 80px;
+
+    }
+    .frame{
+        max-width: 100%;
+        height: auto; 
+        top: auto; 
+        left: auto;
         gap: 0px;
          opacity: 1;
-        margin-top: 50px;
-    }
+        margin-top: 30px;
+      text-align: center;
+ 
+        
+        }
 
-    .blog{
-        width: 43px;
-        height: 25px;
-        gap: 0px;
-         opacity: 1;
-         font-family: 'Matter', sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 25px;
-        text-align: left;
-        color: #0167FF;
-        }
+
         
-        
-        .explore-insight{
-            width: 338px;
-        height: 58px;
-        top: 33px;
-        gap: 0px;
-         opacity: 1; 
-        font-family: 'Matter', sans-serif;
-        font-size: 36px;
-        font-weight: 600;
-        line-height: 57.5px;
-        text-align: left;
-        color: #272848;
-        }
-        
-        .insight-content{
-            width: 414px;
-            height: 36px;
-            top: 123px;
+        .blog{
+            width: 100%;
+            height: auto;
             gap: 0px;
              opacity: 1;
              font-family: 'Matter', sans-serif;
-            font-size: 16px;
-            font-weight: 400;
+            font-size: 12px;
+            font-weight: 600;
             line-height: 25px;
-            text-align: left;
-            color: #535353;
-        }
-        .navigation {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 92px; 
-            height: 40px;
-            gap: 12px;
-            opacity: 1; 
-            margin-top: 35px;
-        }
-        
-        .left-round, .right-round {
-            width: 40px;
-            height: 40px;
-            border-radius: 1000px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .left-round.active {
-            background: #0167FF;
-            border: 1px solid transparent;
-        }
-        
-        .left-round.inactive {
-            background: #fff;
-            border: 1px solid #272848;
-        }
-        
-        .right-round {
-            background: #0167FF;
-            border: 1px solid transparent;
-        }
-        
-        .right-round.inactive {
-            background: #fff;
-            border: 1px solid #272848;
-        }
-        
-        
-
-        .insight-card{
-            width: 1032px;
-        height: 613.98px;
-        top: 120px;
-        left: 513px;
-        gap: 0px;
-         opacity: 1;
-        display: flex;
-         flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 50px;
-        
-        }
-        .insight-card-one{
-            width: 504px;
-            height: 613px;
-            top: 0.02px;
-            gap: 0px;
-            border-radius: 15px ;
-            border: 1px ;
-             opacity: 1;
-            background-color: #fff;
-            
-        
-            border: 1px solid #C3CFE0;
-        
-        }
-        
-        .image-one{
-            width: 488px;
-        height: 260.32px;
-        gap: 0px;
-         opacity: 1;
-        
-        
-        }
-        .insight-card-one-background{
-            width: 504px;
-            height: 613px;
-            top: -0.02px;
-            gap: 0px;
-             opacity: 1;
-            
-            
-        
-        }
-        .insight-card-one-inner{
-            width: 432px;
-            height: 541px;
-            top: 36.02px;
-            left: 36px;
-            gap: 0px;
-             opacity: 1;
-        margin-left: 35px;
-        margin-top: 35px;
-            
-            
-        
-        }
-        .text-box-outter{
-            width:432px;
-        height:  262px;
-        top: 315.02px;
-        left: 36px;
-        gap: 22px;
-         opacity: 1;
-        
-        }
-        .text-box-inner-head{
-            width: 96px;
-        height:  10px;
-        gap: 16px;
-         opacity: 1;
-        
-        }
-        .head-text{
-            width: 96px;
-        height: 10px;
-        gap: 0px;
-         opacity: 1;
-         font-family: 'Matter', sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 21px;
-        text-align: left;
-        color: #0167FF;
-        
-        }
-        
-        .text-box-inner-date{
-            width: 175px;
-            height:  21px;
-            gap: 8px;
-             opacity: 1;
-            display: flex;
-            margin-top: 25px;
-        
-            
-        
-        }
-        .text-box-inner-year{
-            width: 88px;
-            height: 21px;
-            gap: 0px;
-             opacity: 1;
-             font-family: 'Matter', sans-serif;
-            font-size: 13px;
-            font-weight: 400;
-            line-height: 21px;
-            text-align: left;
-            color: #717171;
-        
-        }
-        .text-box-inner-ellipse{
-        width: 4px;
-        height: 4px;
-        gap: 0px;
-         opacity: 1;
-        border-radius: 8px;
-        background: #717171;
-        margin-top: 8px;
-        
-        }
-        .text-box-inner-time{
-            width: 67px;
-        height: 10px;
-        gap: 0px;
-         opacity: 1;
-         font-family: 'Matter', sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 21px;
-        text-align: left;
-        color: #717171;
-        
-        
-        }
-        .text-box-content{
-            width: 432px;
-        height: 127px;
-        gap: 0px;
-         opacity: 1;
-        
-        margin-top: 15px;
-        }
-        .text-box-content-title{
-            width: 432px;
-        height: 44px;
-        top: 75px;
-        gap: 0px;
-         opacity: 1;
-        font-family: 'Matter', sans-serif;
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 29px;
-        text-align: left;
-        color: #000000;
-        
-        
-        }
-        
-        .text-box-content-sub-content{
-            width: 412px;
-            height: 61px;
-            top: 141px;
-            gap: 0px;
-             opacity: 1;
-            font-family: 'Matter', sans-serif;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 25px;
-        text-align: left;
-        color: #616161;
-        margin-top: 25px;
-        
+            text-align: center;
+            color: #0167FF;
             }
-        .text-box-person-one{
-            width:  177px;
-        height:  38px;
-        gap: 12px;
-         opacity: 1;
-        display: flex;
-        margin-top: 30px;
-        
-        }  
-        .text-box-person-one-image {
-            width: 38px;
-            height: 38px;
+            .explore-insight{
+                width: 100%;
+ 
+            height: 100%;
+            top: 33px;
             gap: 0px;
-             opacity: 1;
-            background: #D9F4FF;
-            border-radius: 50%;
-            /* border-radius: 50%;
-            background: #D9F4FF;
-            background: url('../insightpersonone.png') no-repeat;
-            background-size: cover; 
-            background-position: 110% 30%;  */
-        }
-        .text-box-person-one-image-back{
-            width: 38px;
-            height: 38px;
-            gap: 0px;
-             opacity: 1;
-              border-radius: 50%;
+             opacity: 1; 
+            font-family: 'Matter', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 57.5px;
+            text-align: center;
+            color: #272848;
+          
+            }            
+
+      .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 92px; 
+    height: 40px;
+    gap: 12px;
+    opacity: 1; 
+    margin-top: 35px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
         
-            background: url('../../../../gwa_projects/public/insightpersonone.png') no-repeat;
-            background-size: 150% 150%;
-            background-position: 130% top; 
-        }
-        .text-box-person-one-name{
-            width: 127px;
-        height: 10px;
-        gap: 0px;
-         opacity: 1;
-        font-family: 'Matter', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 21px;
-        text-align: center;
-        margin-top: 6px;
+            .left-round {
+                width: 40px;
+                height: 40px;
+                border-radius: 1000px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff;
+                border: 1px solid #272848;
+                transition: background 0.3s, border 0.3s;
+                cursor: pointer;
+
+            }
+            .right-round {
+                width: 40px;
+                height: 40px;
+                border-radius: 1000px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff;
+                border: 1px solid #272848;
+                transition: background 0.3s, border 0.3s;
+                cursor: pointer;
+            }
+            .left-round:hover, .right-round:hover, 
+            .left-round:active, .right-round:active {
+                background: #0167FF;
+                border: 1px solid transparent;
+            }
         
+            .left-round:hover svg path, .right-round:hover svg path, 
+            .left-round:active svg path, .right-round:active svg path {
+                stroke: #fff;
+            }
         
+            .left-round svg path, .right-round svg path {
+                stroke: #272848;
+                transition: stroke 0.3s;
+            }
         
-        }
-        .insight-image-one{
-            max-width: 2700%;
-        height: 1525%;
-        top: 36.02px;
-        left: 36px;
-        gap: 0px;
-         opacity: 1;
-        background: url('../../../../gwa_projects/public/insight1.jpg') center no-repeat;
-        background-size: cover;
-        }
+            .left-round.inactive, .right-round.inactive {
+                background: #fff;
+                border: 1px solid #272848;
+                cursor: default;
+            }
         
-        
-        
-        .insight-card-two{
-            width: 504px;
-            height: 613px;
-            top: 0.02px;
-            gap: 0px;
-            border-radius: 15px ;
-            background-color: #fff;
-             opacity: 1;
-        margin-left: 39px;
-        border: 1px solid #C3CFE0
-        
-        
-        
-        
-        }
-        
-        
-        .insight-card-two-background{
-            width: 504px;
-        height: 613px;
-        top: -0.02px;
-        gap: 0px;
-         opacity: 1;
-        border-radius: 5px;
-        
-        
-        }
-        .insight-card-two-inner{
-            width: 432px;
-            height: 541px;
-            top: 36.02px;
-            left: 36px;
-            gap: 0px;
-             opacity: 1;
-            margin-left: 35px;
-        margin-top: 35px;
+            .left-round.inactive svg path, .right-round.inactive svg path {
+                stroke: #000;
+            }
+   
+
             
-            
-        
-        }
-        
-        .text-box-person-two{
-            width:177px;
-        height: 38px;
-        gap: 12px;
-         opacity: 1;
-        display: flex;
-        margin-top: 30px;
-        
-        }  
-        .text-box-person-two-image{
-            width: 38px;
-        height: 38px;
-        gap: 0px;
-         opacity: 1;
-        background: #D9F4FF;
-        border-radius: 50%;
-        }  
-        .text-box-person-two-image-back {
-            width: 38px;
-            height: 38px;
+            .explore-insight{
+                width: 100%;
+                height: auto;
+            top: 33px;
             gap: 0px;
-             opacity: 1;
-            border-radius: 50%;
-        
-            background: url('../../../../gwa_projects/public/insightpersontwo.jpeg') no-repeat;
-            background-size: 230% 230%; 
-            background-position: 35% top; 
-        }
-        .text-box-person-two-name{
-            width: 135px;
+             opacity: 1; 
+            font-family: 'Matter', sans-serif;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 57.5px;
+            text-align: center;
+            color: #272848;
+            }
+            
+            .insight-content {
+           
+                max-width: 414px;
+                width:100% ;
+                height: auto; 
+                top: 123px;
+                gap: 0;
+                opacity: 1;
+                font-family: 'Matter', sans-serif;
+                font-size: 14px; 
+                font-weight: 400;
+                line-height: 1.5; 
+                text-align: center;
+                color: #535353;
+                display: flex;
+                justify-content: center;
+           
+                
+                
+            }
+            .head-text{
+                width: 96px;
             height: 10px;
             gap: 0px;
              opacity: 1;
              font-family: 'Matter', sans-serif;
             font-size: 14px;
-            font-weight: 400;
+            font-weight: 500;
             line-height: 21px;
             text-align: left;
-            text-align: center;
-            margin-top: 6px;
-        }
-        .insight-image-two{
-            width: 432px;
-        height: 244px;
-        top: 36.02px;
-        left: 36px;
-        gap: 0px;
-         opacity: 1;
-        background: url('../../../../gwa_projects/public/insight2.jpg') center no-repeat ;
-        background-size: cover;
-        }
-    } 
-
-@media (max-width: 600px) {
-    .insight-background {
-        width: 100%;
-        height: 50%;
-        max-width: 100%;
-    
-        overflow-y: auto; 
-
-    }
-    .frame{
-        max-width: 103%;
-height: 100%;
-        top: 311px;
-        left: 80px;
-        gap: 0px;
-         opacity: 1;
-        margin-top: 50px;
-        margin-right: 75px;
-        padding: 10px
-        
-        }
+            color: #0167FF;
+            /* margin-top: 10px; */
+            
+            }
 
 .insight-card{
-    width: 105%;
-height: 613.98px;
+    width: 100%;
+height: auto;
 top: 120px;
 left: 513px;
 gap: 0px;
  opacity: 1;
 display: flex;
+/* margin-right: 50px; */
+justify-content: center;
+
 
 }
 .insight-card-one{
-max-width: 100%;
-    height: 613px;
+    width: 100%;
+    max-width: 504px;
+height: auto;
     top: 0.02px;
     gap: 0px;
     border-radius: 15px ;
     border: 1px ;
      opacity: 1;
     background-color: #fff;
-    
-margin-right: 38px;
+    justify-content: center;
+
     border: 1px solid #C3CFE0;
+    margin-right: 40px;
+
 
 }
 .image-one{
+    max-width: 100%;
     width: 100%;
 height: 260.32px;
 gap: 0px;
@@ -1003,41 +739,33 @@ margin-top: 25px;
 
     }
     .insight-image-one{
-        max-width: 80%;
+        max-width: 78%;
         height: 100%;
     top: 36.02px;
     left: 36px;
     gap: 0px;
      opacity: 1;
-    background: url('../../../../gwa_projects/public/insight1.jpg') center no-repeat;
+    background: url('/public/insight1.jpg') center no-repeat;
     background-size: cover;
     }
-    .text-box-person-one{
-        width:  177px;
-    height:  38px;
-    gap: 12px;
-     opacity: 1;
-    display: flex;
-    margin-top: 30px;
-    
-    }  
+
     .insight-image-two{
-        max-width: 82%;
+        max-width: 78%;
         height: 100%;
     top: 36.02px;
     left: 36px;
     gap: 0px;
      opacity: 1;
-    background: url('../../../../gwa_projects/public/insight2.jpg') center no-repeat;
+    background: url('/public/insight2.jpg') center no-repeat;
     background-size: cover;
     }
     .text-box-person-two{
         width:200px;
-    height: 38px;
+        height: auto;
     gap: 12px;
      opacity: 1;
     display: flex;
-    margin-top: 70px;
+    margin-top: 90px;
     
     }  
     .text-box-person-two-name{
@@ -1055,7 +783,7 @@ margin-top: 25px;
     }
     .insight-card-two{
         max-width: 100%;
-            height: 613px;
+        height: auto;
             top: 0.02px;
             gap: 0px;
             border-radius: 15px ;
@@ -1063,8 +791,9 @@ margin-top: 25px;
              opacity: 1;
             background-color: #fff;
             
-        margin-right: 80px;
+
             border: 1px solid #C3CFE0;
+            margin-right: 40px;
         
         }
         .image-two{
@@ -1101,57 +830,423 @@ margin-top: 25px;
         }
         .text-box-person-one{
             width:  177px;
-        height:  38px;
+            height: auto;
         gap: 12px;
          opacity: 1;
         display: flex;
-        margin-top: 70px;
+        margin-top: 90px;
         
         }  
 
 }
 
 
-@media (max-width: 768px) {
+
+@media (min-width: 820px) and (max-width: 1024px) {
     .insight-background {
-   
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    height: auto;
         width: 100%;
         max-width: 100%;
-        overflow-y: auto; 
+        box-sizing: border-box; 
+overflow-x: hidden; 
+            padding: 120px 30px 119.02px 40px;
+      
     }
-    .insight-card-one{
-        width: 504px;
-        height: 613px;
+
+    .frame {
+        max-width: 80%;
+        height: auto; 
+        top: auto; 
+        left: auto;
+        gap: 0px;
+         opacity: 1;
+        margin-top: 30px;
+      text-align: center;
+      margin-left: 15%;
+
+    }
+
+    .blog{
+        width: 43px;
+        height: 25px;
+        gap: 0px;
+         opacity: 1;
+         font-family: 'Matter', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 25px;
+        text-align: center;
+        color: #0167FF;
+        }
+        
+        .navigation {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 92px; 
+            height: 40px;
+            gap: 12px;
+            opacity: 1; 
+            margin-top: 35px;
+        }
+    
+        .left-round, .right-round {
+            width: 40px;
+            height: 40px;
+            border-radius: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border: 1px solid #272848;
+            transition: background 0.3s, border 0.3s;
+            cursor: pointer;
+        }
+    
+        .left-round:hover, .right-round:hover, 
+        .left-round:active, .right-round:active {
+            background: #0167FF;
+            border: 1px solid transparent;
+        }
+    
+        .left-round:hover svg path, .right-round:hover svg path, 
+        .left-round:active svg path, .right-round:active svg path {
+            stroke: #fff;
+        }
+    
+        .left-round svg path, .right-round svg path {
+            stroke: #272848;
+            transition: stroke 0.3s;
+        }
+    
+        .left-round.inactive, .right-round.inactive {
+            background: #fff;
+            border: 1px solid #272848;
+            cursor: default;
+        }
+    
+        .left-round.inactive svg path, .right-round.inactive svg path {
+            stroke: #000;
+        }
+
+
+
+        
+        .explore-insight{
+            width: 338px;
+        height: 58px;
+        top: 33px;
+        gap: 0px;
+         opacity: 1; 
+        font-family: 'Matter', sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 57.5px;
+        text-align: left;
+        color: #272848;
+        }
+        
+        .insight-content{
+            max-width: 150%;
+            height: 20%;
+            top: 123px;
+            gap: 0px;
+             opacity: 1;
+             font-family: 'Matter', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 25px;
+            text-align: left;
+            color: #535353;
+        }
+   
+        .head-text{
+            width: 96px;
+        height: 10px;
+        gap: 0px;
+         opacity: 1;
+         font-family: 'Matter', sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        text-align: left;
+        color: #0167FF;
+        margin-top: 10px;
+        
+        }
+
+        .insight-card{
+            width: 100%;
+            max-width:504px ;
+            height: auto;
+            top: 120px;
+            left: 513px;
+            gap: 0px;
+             opacity: 1;
+            display: flex;
+  
+
+
+        
+        }
+        .insight-card-one{
+            width: 70%;
+    max-width: 404px;
+height: auto;
+    top: 0.02px;
+    gap: 0px;
+    border-radius: 15px ;
+    border: 1px ;
+     opacity: 1;
+    background-color: #fff;
+    margin-right: 400px;
+
+    border: 1px solid #C3CFE0;
+        
+        }
+        
+
+       
+.insight-card-one-background{
+    width: 100%;
+    height: 613px;
+    top: -0.02px;
+    gap: 0px;
+     opacity: 1;
+    
+    
+
+}
+
+
+.insight-card-one-inner{
+    width:100%;
+    height: 541px;
+    top: 36.02px;
+    left: 36px;
+    gap: 0px;
+     opacity: 1;
+
+margin-top: 35px;
+    
+    
+
+}
+.text-box-outter{
+    max-width:80%;
+height:  262px;
+top: 315.02px;
+left: 36px;
+gap: 22px;
+ opacity: 1;
+
+}
+.text-box-content{
+    width: 100%;
+height: 127px;
+gap: 0px;
+ opacity: 1;
+
+margin-top: 15px;
+}
+.text-box-content-title{
+    width: 100%;
+height: 44px;
+top: 75px;
+gap: 0px;
+ opacity: 1;
+font-family: 'Matter', sans-serif;
+font-size: 22px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color: #000000;
+
+
+}
+.text-box-content-sub-content{
+    width: 100%;
+    height: 61px;
+    top: 141px;
+    gap: 0px;
+     opacity: 1;
+    font-family: 'Matter', sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 25px;
+text-align: left;
+color: #616161;
+margin-top: 25px;
+
+    }
+    .image-one{
+        max-width: 100%;
+width: 100%;
+height: 260.32px;
+gap: 0px;
+opacity: 1;;
+    
+    
+    }
+    .insight-image-one{
+        max-width: 80%;
+        height: 100%;
+    top: 36.02px;
+    left: 36px;
+    gap: 0px;
+     opacity: 1;
+    background: url('/public/insight1.jpg') center no-repeat;
+    background-size: cover;
+    }
+
+    .insight-image-two{
+        max-width: 78%;
+        height: 100%;
+    top: 36.02px;
+    left: 36px;
+    gap: 0px;
+     opacity: 1;
+    background: url('/public/insight2.jpg') center no-repeat;
+    background-size: cover;
+    }
+    .text-box-person-two{
+        width:200px;
+        height: auto;
+    gap: 12px;
+     opacity: 1;
+    display: flex;
+    margin-top: 90px;
+    
+    }  
+    .text-box-person-two-name{
+        width: 140px;
+        height: 10px;
+        gap: 0px;
+         opacity: 1;
+         font-family: 'Matter', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        text-align: center;
+        margin-top: 6px;
+    }
+    .insight-card-two{
+        width: 70%;
+        max-width: 404px;
+    height: auto;
         top: 0.02px;
         gap: 0px;
         border-radius: 15px ;
         border: 1px ;
          opacity: 1;
         background-color: #fff;
-        
+        margin-right: 400px;
     
         border: 1px solid #C3CFE0;
-    
-    }
-    
+        }
+        .image-two{
+            width: 100%;
+        height: 260.32px;
+        gap: 0px;
+         opacity: 1;
+        
+        }
+        .insight-card-two-background{
+            width: 100%;
+            height: 613px;
+            top: -0.02px;
+            gap: 0px;
+             opacity: 1;
+            
+            
+        
+        }
+        
+        
+        .insight-card-two-inner{
+            width:100%;
+            height: 541px;
+            top: 36.02px;
+            left: 36px;
+            gap: 0px;
+             opacity: 1;
+        
+        margin-top: 35px;
+            
+            
+        
+        }
+        .text-box-person-one{
+            width:  177px;
+            height: auto;
+        gap: 12px;
+         opacity: 1;
+        display: flex;
+        margin-top: 90px;
+        
+        }  
+
 }
 
-@media screen and (max-width: 820px) {
-    .insight-background {
+@media (min-width: 768px) and (max-width: 819px) {
    
-      
-        max-width: 100%;
-        overflow-x: auto; 
-       
-    }
+.image-one{
+    max-width: 100%;
+    width: 100%;
+height: 260.32px;
+gap: 0px;
+ opacity: 1;
+
 }
 
 
-@media screen and (max-width: 1024px) {
-    .insight-background {
-   
-        width: 100%;
-        max-width: 100%;
-        overflow-y: auto; 
+
+    .insight-image-one{
+        max-width: 90%;
+        height: 100%;
+    top: 36.02px;
+    left: 36px;
+    gap: 0px;
+     opacity: 1;
+    background: url('/public/insight1.jpg') center no-repeat;
+    background-size: cover;
     }
+
+    .insight-image-two{
+        max-width: 78%;
+        height: 100%;
+    top: 36.02px;
+    left: 36px;
+    gap: 0px;
+     opacity: 1;
+    background: url('/public/insight2.jpg') center no-repeat;
+    background-size: cover;
+    }
+    .text-box-person-two{
+        width:200px;
+        height: auto;
+    gap: 12px;
+     opacity: 1;
+    display: flex;
+    margin-top: 60px;
+    
+    }  
+    .text-box-person-one{
+        width:  177px;
+        height: auto;
+    gap: 12px;
+     opacity: 1;
+    display: flex;
+    margin-top: 60px;
+    
+    }  
+
+   
+
 }

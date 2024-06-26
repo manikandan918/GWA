@@ -1,5 +1,5 @@
-.navbar-costom-style{
-  padding: 15px 50px;
+.navbar-head-style{
+  padding: 2rem  3rem;
 }
   
 .nav-link-style{
@@ -7,10 +7,6 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 25px;
-    text-align: left;
-}
-.nav-ul li{
-  margin-left:10px;
 }
   
 /*======================dropdown-style-------start====================*/
@@ -35,7 +31,7 @@
 
 /*======================dropdown-style-------End====================*/
 
-.navbar-costom-style .nav-signin-button {
+.navbar-head-style .nav-signin-button {
   border: 1px solid #0167FF;
   color: #0167FF;
   padding: 7px 20px;
@@ -43,7 +39,7 @@
   font-weight: 600;
 }
 
-.navbar-costom-style .nav-register-button {
+.navbar-head-style .nav-register-button {
   background: #0167FF;
   color: #FFFFFF;
   padding: 7px 20px;

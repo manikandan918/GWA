@@ -7,20 +7,20 @@ function Insights() {
     const [visibleCards, setVisibleCards] = useState([0, 1]); 
     const totalCards = 4;
 
-   
     useEffect(() => {
         const handleResize = () => {
             const screenWidth = window.innerWidth;
-            if (screenWidth < 1025) {
+            if (screenWidth < 820) {
+                setVisibleCards([0]);
+            } else if (screenWidth >= 820 && screenWidth <= 1025) {
                 setVisibleCards([0]); 
             } else {
                 setVisibleCards([0, 1]); 
             }
         };
-
+    
 
         handleResize();
-
 
         window.addEventListener('resize', handleResize);
         return () => {
@@ -30,20 +30,28 @@ function Insights() {
 
     const handleLeftClick = () => {
         setVisibleCards(prevCards => {
-            const newCards = prevCards.map(index => index - 1);
-            return newCards[0] < 0 ? prevCards : newCards;
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 820) {
+                const newCard = (prevCards[0] - 1 + totalCards) % totalCards;
+                return [newCard];
+            }
+            const newCards = prevCards.map(index => (index - 1 + totalCards) % totalCards);
+            return newCards;
         });
     };
 
     const handleRightClick = () => {
         setVisibleCards(prevCards => {
-            const newCards = prevCards.map(index => index + 1);
-            return newCards[newCards.length - 1] >= totalCards ? prevCards : newCards;
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 820) {
+                const newCard = (prevCards[0] + 1) % totalCards;
+                return [newCard];
+            }
+            const newCards = prevCards.map(index => (index + 1) % totalCards);
+            return newCards;
         });
     };
 
-    const isFirstCardVisible = visibleCards.includes(0);
-    const isLastCardVisible = visibleCards.includes(totalCards - 1);
 
     useEffect(() => {
         document.title = "Explore-Insight";
@@ -101,27 +109,26 @@ function Insights() {
             <div className="frame">
                 <div className="blog">BLOG</div>
                 <div className="explore-insight">Explore Insights</div>
-                <p className="insight-content">Stay one step ahead with our dedicated latest news <br />update blogs.</p>
+                <p className="insight-content">Stay one step ahead with our dedicated latest news update blogs.</p>
                 <div className="navigation">
                     <div 
-                        className={`left-round ${isFirstCardVisible ? 'inactive' : 'active'}`} 
+                        className="left-round active" 
                         onClick={handleLeftClick}
                     >
                         <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 2L2 6L7 10" stroke={isFirstCardVisible ? "#000" : "#fff"} strokeWidth="1.725" strokeLinecap="square"/>
+                            <path d="M7 2L2 6L7 10" stroke="#272848" strokeWidth="1.725" strokeLinecap="square"/>
                         </svg>
                     </div>
                     <div 
-                        className={`right-round ${isLastCardVisible ? 'inactive' : 'active'}`} 
+                        className="right-round active" 
                         onClick={handleRightClick}
                     >
                         <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 10L7 6L2 2" stroke={isLastCardVisible ? "#000" : "#fff"} strokeWidth="1.725" strokeLinecap="square"/>
+                            <path d="M2 10L7 6L2 2" stroke="#272848" strokeWidth="1.725" strokeLinecap="square"/>
                         </svg>
                     </div>
                 </div>
             </div>
-
             <div className="insight-card">
                 {visibleCards.map(index => {
                     const card = cardData[index];

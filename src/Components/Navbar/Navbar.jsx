@@ -40,8 +40,8 @@ const Navbar = () => {
 
   return (
     <header>
-        <nav className="navbar navbar-expand-lg navbar-light   navbar-costom-style">
-            <a className="navbar-brand ml-md-2" href="#"><img src={brand} alt="Brand Logo" height="36px" /></a>
+        <nav className="navbar navbar-expand-lg navbar-light navbar-head-style">
+            <a className="navbar-brand" href="#"><img src={brand} alt="Brand Logo" height="36px" /></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
             </button>

@@ -49,7 +49,7 @@ const WhyUs = () => {
     setFemaleHoverData({ isVisible: false, doctorType: '',position: {} });
   };
   return (
-    <div >
+    <div className='main' >
       <div className="why-us-section text-center ">
         <div className="lorem-ipsum">LOREM IPSUM</div>
         <h2 className="mb-4 why-us">Why Us?</h2>
@@ -103,9 +103,9 @@ const WhyUs = () => {
       <div className="provider-section-1 my-5"
         onMouseEnter={handleMaleMouseEnter}
         onMouseLeave={handleMaleMouseLeave}>
-    <div className="row" style={{ display: 'flex', flexDirection: 'row-reverse' }}>
-        <div className="col-sm-4 provider-feature1 d-flex justify-content-end" style={{ position: 'relative', zIndex: 2 }}>
-            <div className="overlay-container">
+    <div className="row reverse-row" >
+        <div className="col-sm-4 provider-feature1 d-flex ">
+            <div className="overlay-container-1">
                 <img ref={maleDocRef} src="/maledoc1.png" alt="Male Doc 1" className="overlay first" />
                 <img ref={maleDocRef} src="/maledoc2.png" alt="Male Doc 2" className="overlay second" />
             </div>
@@ -127,8 +127,8 @@ const WhyUs = () => {
         onMouseEnter={handleFemaleMouseEnter}
         onMouseLeave={handleFemaleMouseLeave}>
     <div className="row">
-        <div className="col-sm-4 provider-feature2 d-flex justify-content-end" style={{ position: 'relative', zIndex: 2 }}>
-            <div className="overlay-container">
+        <div className="col-sm-4 provider-feature2 d-flex justify-content-end" >
+            <div className="overlay-container-2">
                 <img ref={femaleDocRef} src="/femaledoc1.png" alt="Female Doc 1" className="overlay first-1" />
                 <img ref={femaleDocRef} src="/femaledoc2.png" alt="Female Doc 2" className="overlay second-2" />
             </div>
