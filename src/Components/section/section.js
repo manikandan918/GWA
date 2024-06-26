@@ -9,6 +9,7 @@ import Footerr from '../footer/footer';
 import Footer from '../footer/footerrs';
 import WhyUs from '../section.6/Whyus';
 import Insights from '../Insight/Insights';
+import MiddlePart from '../Middlepage/MiddlePart';
 
 
 // import Insights from '../section.6/Appp';
@@ -19,9 +20,9 @@ function Section() {
       <Hero/>
       <Nestednavbar/>
       <WhyUs/>
+      {/* <MiddlePart/> */}
       <Insights/>
       <TestimonialSlider/>
-   
       <CenteredContent/>
       <Footerr/>
     <Footer/>

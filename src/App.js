@@ -1,7 +1,7 @@
 
 
 import './App.css';
-import Section from './components/section/section';
+import Section from './Components/section/section';
 
 //Bootstrap imported
 import 'bootstrap/dist/css/bootstrap.css';

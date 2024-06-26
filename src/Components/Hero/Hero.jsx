@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import './hero.css'; 
 import Navbar from '../Navbar/Navbar';
 import map from '../Assets/map.png';
