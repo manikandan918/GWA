@@ -12,13 +12,14 @@ function Insights() {
             const screenWidth = window.innerWidth;
             if (screenWidth < 820) {
                 setVisibleCards([0]);
-            } else if (screenWidth >= 820 && screenWidth <= 1025) {
+            } else if (screenWidth >= 820 && screenWidth <= 1350) {
                 setVisibleCards([0]); 
+            } else if (screenWidth > 1950) {
+                setVisibleCards([0, 1, 2]);
             } else {
                 setVisibleCards([0, 1]); 
             }
         };
-    
 
         handleResize();
 
@@ -34,6 +35,9 @@ function Insights() {
             if (screenWidth < 820) {
                 const newCard = (prevCards[0] - 1 + totalCards) % totalCards;
                 return [newCard];
+            } else if (screenWidth > 2000) {
+                const newCard = (prevCards[0] - 1 + totalCards) % totalCards;
+                return [newCard, (newCard + 1) % totalCards, (newCard + 2) % totalCards];
             }
             const newCards = prevCards.map(index => (index - 1 + totalCards) % totalCards);
             return newCards;
@@ -46,6 +50,9 @@ function Insights() {
             if (screenWidth < 820) {
                 const newCard = (prevCards[0] + 1) % totalCards;
                 return [newCard];
+            } else if (screenWidth > 2000) {
+                const newCard = (prevCards[prevCards.length - 1] + 1) % totalCards;
+                return [(newCard - 2 + totalCards) % totalCards, (newCard - 1 + totalCards) % totalCards, newCard];
             }
             const newCards = prevCards.map(index => (index + 1) % totalCards);
             return newCards;
