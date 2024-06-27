@@ -81,12 +81,13 @@ const Nestednavbar = () => {
       </div>
 
       <div className="video-wrapper">
-        <div className="video-player zoomed-out">
-          <video loop muted controls className="video">
-            <source src={gwatrailer} type="video/mp4" />
-          </video>
-        </div>
-      </div>
+  <div className="video-player zoomed-out">
+    <video loop autoPlay muted controls className="video">
+      <source src={gwatrailer} type="video/mp4" />
+    </video>
+  </div>
+</div>
+
     </>
   );
 };

@@ -65,6 +65,123 @@
 }
 
 .grid-item img {
-    width: 70px; /* Increased width */
-    height: 50px; /* Increased height */
+    width: 86px; /* Increased width */
+    height: 68px; /* Increased height */
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1024px) {
+
+    .grid-item p {
+        color: #52525B;
+        font-family: Matter, sans-serif;
+        line-height: 28px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    .grid-item h2 {
+        font-family: Matter, sans-serif;
+        color: #0167FF;
+        font-size:22px;
+        line-height: 28px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1440px) {
+
+    .grid-item p {
+        color: #52525B;
+        font-family: Matter, sans-serif;
+        line-height: 32px;
+        font-size: 19px;
+        font-weight: 400;
+    }
+    
+    .grid-item h2 {
+        font-family: Matter, sans-serif;
+        color: #0167FF;
+        font-size:25px;
+        line-height: 28px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    .grid-item img{
+        width: 90px;
+        height:90px
+    }
+}
+
+
+@media screen and (min-width: 2560px) and (max-width: 2560px) {
+    
+    .background {
+        padding: 50px;
+        background: linear-gradient(180deg, #E4EDFF -17.3%, rgba(253, 254, 255, 0.0763343) 72.99%, rgba(255, 255, 255, 0) 80.46%);
+    }
+    
+    .grid-item {
+        border: none;
+        border-radius: 9px;
+        padding: 20px; 
+        text-align: center;
+        margin-top: 2rem;
+        background: transparent;
+        width: 700px;
+    }
+
+
+    .grid-item p {
+        color: #52525B;
+        font-family: Matter, sans-serif;
+        line-height: 28px;  
+        font-size: 16px;    
+        font-weight: 400;
+        max-width:340px;
+        text-align: center;
+        margin-left: 155px;
+    }
+    
+    .grid-item h2 {
+        font-family: Matter, sans-serif;
+        color: #0167FF;
+        font-size:20px;      
+        line-height: 28px;  
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    .grid-item img{
+        width: 86px;
+        height:68px
+    }
+}
+
+
+
+@media screen and (min-width: 2560px) and (max-width: 2560px) {
+    
+    .grid-item p {
+        color: #52525B;
+        font-family: Matter, sans-serif;
+        line-height: 28px;  /*55*/
+        font-size: 16px;    /*37*/
+        font-weight: 400;
+    }
+    
+    .grid-item h2 {
+        font-family: Matter, sans-serif;
+        color: #0167FF;
+        font-size:20px;      /*55*/
+        line-height: 28px;  /*65*/
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    .grid-item img{
+        width: 86px;/*120*/
+        height:68px
+    }
 }
